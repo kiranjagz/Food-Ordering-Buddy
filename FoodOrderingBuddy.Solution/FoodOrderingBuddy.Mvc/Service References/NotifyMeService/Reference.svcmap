@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ab5fb139-5c1c-4abd-9070-c852f092e4d9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3793/NotifyMeService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="NotifyMeService.xsd" MetadataType="Schema" ID="5c7be9f5-1dfa-47a7-98c4-952a82ff10e7" SourceId="1" SourceUrl="http://localhost:3793/NotifyMeService.svc?xsd=xsd0" />
+    <MetadataFile FileName="NotifyMeService.wsdl" MetadataType="Wsdl" ID="86c069bd-f07c-4171-89ec-f610849d5da3" SourceId="1" SourceUrl="http://localhost:3793/NotifyMeService.svc?wsdl" />
+    <MetadataFile FileName="NotifyMeService1.xsd" MetadataType="Schema" ID="50a96266-216b-4cda-8ce4-b0c7962f11c7" SourceId="1" SourceUrl="http://localhost:3793/NotifyMeService.svc?xsd=xsd2" />
+    <MetadataFile FileName="NotifyMeService.disco" MetadataType="Disco" ID="3397bf49-e863-4771-a036-8738313055f5" SourceId="1" SourceUrl="http://localhost:3793/NotifyMeService.svc?disco" />
+    <MetadataFile FileName="NotifyMeService2.xsd" MetadataType="Schema" ID="ccf7cde4-53b7-4a48-bb0d-a94955a1d9d8" SourceId="1" SourceUrl="http://localhost:3793/NotifyMeService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

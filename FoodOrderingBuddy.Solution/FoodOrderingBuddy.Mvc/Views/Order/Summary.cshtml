@@ -1,0 +1,83 @@
+﻿@model FoodOrderingBuddy.Models.OrderViewModel
+
+    @{
+        ViewBag.Title = "Summary";
+    }
+
+    <h2>Summary of Order</h2>
+
+    <div>
+        <hr />
+
+        <p>An email has been sent to @Model.Username of you order details. Hope you have a sweet day :). Thanks again.</p>
+        <p>Your order number is:  <strong>@Model.OrderId</strong></p>
+
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Username) :
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Username)
+            </dd>
+
+            <dt>
+                Order Date :
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DateCreated)
+            </dd>
+
+            <dt>
+                Total Menu Items :
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MenuItemsTotal)
+            </dd>
+
+            <dt>
+                Total of Order :
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Total)
+            </dd>
+        </dl>
+
+        <div>
+            <table class="table">
+                <tr>
+                    <th>
+                        Item Name
+                    </th>
+                    <th>
+                        Price
+                    </th>
+                    <th>
+                        Quantity
+                    </th>
+                </tr>
+
+                @foreach (var item in Model.OrderItemViewModels)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MenuItemName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Quantity)
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Home")'">Still Hungry?</button>

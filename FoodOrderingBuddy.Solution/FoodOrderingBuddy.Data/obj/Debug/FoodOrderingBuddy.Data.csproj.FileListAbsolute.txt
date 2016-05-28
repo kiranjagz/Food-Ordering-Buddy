@@ -1,0 +1,40 @@
+c:\users\kiran\documents\visual studio 2013\Projects\FoodOrderingBuddy\FoodOrderingBuddy.Data\bin\Debug\FoodOrderingBuddy.Data.dll.config
+c:\users\kiran\documents\visual studio 2013\Projects\FoodOrderingBuddy\FoodOrderingBuddy.Data\bin\Debug\FoodOrderingBuddy.Data.dll
+c:\users\kiran\documents\visual studio 2013\Projects\FoodOrderingBuddy\FoodOrderingBuddy.Data\bin\Debug\FoodOrderingBuddy.Data.pdb
+c:\users\kiran\documents\visual studio 2013\Projects\FoodOrderingBuddy\FoodOrderingBuddy.Data\bin\Debug\EntityFramework.dll
+c:\users\kiran\documents\visual studio 2013\Projects\FoodOrderingBuddy\FoodOrderingBuddy.Data\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\kiran\documents\visual studio 2013\Projects\FoodOrderingBuddy\FoodOrderingBuddy.Data\bin\Debug\EntityFramework.xml
+c:\users\kiran\documents\visual studio 2013\Projects\FoodOrderingBuddy\FoodOrderingBuddy.Data\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\kiran\documents\visual studio 2013\Projects\FoodOrderingBuddy\FoodOrderingBuddy.Data\obj\Debug\FoodOrderingBuddy.Data.csprojResolveAssemblyReference.cache
+c:\users\kiran\documents\visual studio 2013\Projects\FoodOrderingBuddy\FoodOrderingBuddy.Data\obj\Debug\FoodOrderingBuddy.Data.dll
+c:\users\kiran\documents\visual studio 2013\Projects\FoodOrderingBuddy\FoodOrderingBuddy.Data\obj\Debug\FoodOrderingBuddy.Data.pdb
+C:\Users\Kiran\Desktop\FoodOrderingBuddy\FoodOrderingBuddy.Data\bin\Debug\FoodOrderingBuddy.Data.dll.config
+C:\Users\Kiran\Desktop\FoodOrderingBuddy\FoodOrderingBuddy.Data\bin\Debug\FoodOrderingBuddy.Data.dll
+C:\Users\Kiran\Desktop\FoodOrderingBuddy\FoodOrderingBuddy.Data\bin\Debug\FoodOrderingBuddy.Data.pdb
+C:\Users\Kiran\Desktop\FoodOrderingBuddy\FoodOrderingBuddy.Data\bin\Debug\EntityFramework.dll
+C:\Users\Kiran\Desktop\FoodOrderingBuddy\FoodOrderingBuddy.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kiran\Desktop\FoodOrderingBuddy\FoodOrderingBuddy.Data\bin\Debug\EntityFramework.xml
+C:\Users\Kiran\Desktop\FoodOrderingBuddy\FoodOrderingBuddy.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kiran\Desktop\FoodOrderingBuddy\FoodOrderingBuddy.Data\obj\Debug\FoodOrderingBuddy.Data.csprojResolveAssemblyReference.cache
+C:\Users\Kiran\Desktop\FoodOrderingBuddy\FoodOrderingBuddy.Data\obj\Debug\FoodOrderingBuddy.Data.dll
+C:\Users\Kiran\Desktop\FoodOrderingBuddy\FoodOrderingBuddy.Data\obj\Debug\FoodOrderingBuddy.Data.pdb
+C:\Users\Kiran\Desktop\FoodOrderingBuddy.Solution\FoodOrderingBuddy.Data\bin\Debug\FoodOrderingBuddy.Data.dll.config
+C:\Users\Kiran\Desktop\FoodOrderingBuddy.Solution\FoodOrderingBuddy.Data\bin\Debug\FoodOrderingBuddy.Data.dll
+C:\Users\Kiran\Desktop\FoodOrderingBuddy.Solution\FoodOrderingBuddy.Data\bin\Debug\FoodOrderingBuddy.Data.pdb
+C:\Users\Kiran\Desktop\FoodOrderingBuddy.Solution\FoodOrderingBuddy.Data\bin\Debug\EntityFramework.dll
+C:\Users\Kiran\Desktop\FoodOrderingBuddy.Solution\FoodOrderingBuddy.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kiran\Desktop\FoodOrderingBuddy.Solution\FoodOrderingBuddy.Data\bin\Debug\EntityFramework.xml
+C:\Users\Kiran\Desktop\FoodOrderingBuddy.Solution\FoodOrderingBuddy.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kiran\Desktop\FoodOrderingBuddy.Solution\FoodOrderingBuddy.Data\obj\Debug\FoodOrderingBuddy.Data.csprojResolveAssemblyReference.cache
+C:\Users\Kiran\Desktop\FoodOrderingBuddy.Solution\FoodOrderingBuddy.Data\obj\Debug\FoodOrderingBuddy.Data.dll
+C:\Users\Kiran\Desktop\FoodOrderingBuddy.Solution\FoodOrderingBuddy.Data\obj\Debug\FoodOrderingBuddy.Data.pdb
+C:\Software Development\FoodOrderingBuddy.Mvc\FoodOrderingBuddy.Solution\FoodOrderingBuddy.Data\bin\Debug\FoodOrderingBuddy.Data.dll.config
+C:\Software Development\FoodOrderingBuddy.Mvc\FoodOrderingBuddy.Solution\FoodOrderingBuddy.Data\bin\Debug\FoodOrderingBuddy.Data.dll
+C:\Software Development\FoodOrderingBuddy.Mvc\FoodOrderingBuddy.Solution\FoodOrderingBuddy.Data\bin\Debug\FoodOrderingBuddy.Data.pdb
+C:\Software Development\FoodOrderingBuddy.Mvc\FoodOrderingBuddy.Solution\FoodOrderingBuddy.Data\bin\Debug\EntityFramework.dll
+C:\Software Development\FoodOrderingBuddy.Mvc\FoodOrderingBuddy.Solution\FoodOrderingBuddy.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Software Development\FoodOrderingBuddy.Mvc\FoodOrderingBuddy.Solution\FoodOrderingBuddy.Data\bin\Debug\EntityFramework.xml
+C:\Software Development\FoodOrderingBuddy.Mvc\FoodOrderingBuddy.Solution\FoodOrderingBuddy.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Software Development\FoodOrderingBuddy.Mvc\FoodOrderingBuddy.Solution\FoodOrderingBuddy.Data\obj\Debug\FoodOrderingBuddy.Data.dll
+C:\Software Development\FoodOrderingBuddy.Mvc\FoodOrderingBuddy.Solution\FoodOrderingBuddy.Data\obj\Debug\FoodOrderingBuddy.Data.pdb
+C:\Software Development\FoodOrderingBuddy.Mvc\FoodOrderingBuddy.Solution\FoodOrderingBuddy.Data\obj\Debug\FoodOrderingBuddy.Data.csprojResolveAssemblyReference.cache

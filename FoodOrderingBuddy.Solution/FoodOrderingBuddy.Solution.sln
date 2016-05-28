@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodOrderingBuddy.Tests", "FoodOrderingBuddy.Tests\FoodOrderingBuddy.Tests.csproj", "{EE5FF42F-4D91-402E-AB18-1195FBB65040}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodOrderingBuddy.Data", "FoodOrderingBuddy.Data\FoodOrderingBuddy.Data.csproj", "{7B48B790-0102-45B2-9010-DA1938FF9D73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodOrderingBuddy.Mvc", "FoodOrderingBuddy.Mvc\FoodOrderingBuddy.Mvc.csproj", "{5F31A5A9-EBEA-4942-A2C7-81794A8D39EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodOrderingBuddy.Notifyme", "FoodOrderingBuddy.Notifyme\FoodOrderingBuddy.Notifyme.csproj", "{02E4335A-0DE8-4A26-8928-2224F9AFDB19}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://kirandev.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = FoodOrderingBuddy.Tests\\FoodOrderingBuddy.Tests.csproj
+		SccProjectName1 = FoodOrderingBuddy.Tests
+		SccLocalPath1 = FoodOrderingBuddy.Tests
+		SccProjectUniqueName2 = FoodOrderingBuddy.Mvc\\FoodOrderingBuddy.Mvc.csproj
+		SccProjectName2 = FoodOrderingBuddy.Mvc
+		SccLocalPath2 = FoodOrderingBuddy.Mvc
+		SccProjectUniqueName3 = FoodOrderingBuddy.Data\\FoodOrderingBuddy.Data.csproj
+		SccProjectName3 = FoodOrderingBuddy.Data
+		SccLocalPath3 = FoodOrderingBuddy.Data
+		SccProjectUniqueName4 = FoodOrderingBuddy.Notifyme\\FoodOrderingBuddy.Notifyme.csproj
+		SccProjectName4 = FoodOrderingBuddy.Notifyme
+		SccLocalPath4 = FoodOrderingBuddy.Notifyme
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE5FF42F-4D91-402E-AB18-1195FBB65040}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE5FF42F-4D91-402E-AB18-1195FBB65040}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE5FF42F-4D91-402E-AB18-1195FBB65040}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE5FF42F-4D91-402E-AB18-1195FBB65040}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B48B790-0102-45B2-9010-DA1938FF9D73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B48B790-0102-45B2-9010-DA1938FF9D73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B48B790-0102-45B2-9010-DA1938FF9D73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B48B790-0102-45B2-9010-DA1938FF9D73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F31A5A9-EBEA-4942-A2C7-81794A8D39EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F31A5A9-EBEA-4942-A2C7-81794A8D39EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F31A5A9-EBEA-4942-A2C7-81794A8D39EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F31A5A9-EBEA-4942-A2C7-81794A8D39EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02E4335A-0DE8-4A26-8928-2224F9AFDB19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02E4335A-0DE8-4A26-8928-2224F9AFDB19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02E4335A-0DE8-4A26-8928-2224F9AFDB19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02E4335A-0DE8-4A26-8928-2224F9AFDB19}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

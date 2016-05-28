@@ -1,0 +1,84 @@
+﻿@model IEnumerable<FoodOrderingBuddy.Models.MenuCatergoryViewModel>
+
+<link href="~/Content/mylayout.css" rel="stylesheet" />
+<link href="~/Content/themes/base/all.css" rel="stylesheet" />
+<script src="~/js/Home/addtocart.js"></script>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Home</h2>
+
+<div id="dialog" title="Add new item?" style="display: none">
+    <p>
+        <span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>These items will be added to the system. Are you sure?
+    </p>
+</div>
+
+<div id="dialogSuccess" title="Success!!!" style="display: none">
+    <p>
+        <span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>
+    <p id="message">
+    </p>
+</div>
+
+<div class="modal">
+</div>
+
+<div class="container-fluid">
+    <section class="row">
+        <div id="accordion">
+            @foreach (var item in Model)
+            {
+                <h3>
+                    @item.Name
+                    @{
+                var base64 = Convert.ToBase64String(item.ImageByte);
+                var imgSrc = String.Format("data:image/png;base64,{0}", base64);
+                    }
+                    <img src='@imgSrc' style="max-width:20px; max-height:20px;" />
+                </h3>
+                <div>
+
+                    <table id="fooditems" class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(m => m.MenuItemViewModels.First().Name)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(m => m.MenuItemViewModels.First().Description)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(m => m.MenuItemViewModels.First().Price)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(m => m.MenuItemViewModels.First().DateCreated)
+                                </th>
+                            </tr>
+                        </thead>
+                        @foreach (var menuItem in item.MenuItemViewModels)
+                        {
+                            <tbody>
+                                <tr data-id="@menuItem.MenuItemId">
+                                    <td>
+                                        @Html.DisplayFor(m => menuItem.Name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => menuItem.Description)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => menuItem.Price)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => menuItem.DateCreated)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+                    </table>
+                </div>
+            }
+        </div>
+    </section>
+</div>

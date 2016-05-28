@@ -1,0 +1,133 @@
+﻿@model IEnumerable<FoodOrderingBuddy.Models.ShoppingCartViewModel>
+
+<script src="~/js/ShoppingCart/removefromcart.js"></script>
+<script src="~/js/ShoppingCart/redeemcoupon.js"></script>
+@*<link href="~/Content/myanimations.css" rel="stylesheet" />*@
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Order Details</h2>
+
+<div id="dialog" title="Add new item?" style="display: none">
+    <p>
+        <span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>This item will be deleted from your cart. Are you sure?
+    </p>
+</div>
+
+<div id="dialogSuccess" title="Success!!!" style="display: none">
+    <p>
+        <span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>
+    <p id="message">
+    </p>
+</div>
+
+<div id="dialogGetcoupon" title="Redeem a coupon?" style="display: none">
+    <p>
+        <label id="lblCouponCode">Enter code: </label>
+        <input type="text" placeholder="enter a code" id="couponCode" required />
+    </p>
+</div>
+
+<div id="dialgoRedeemCoupon" title="Get this coupon sir?" style="display: none;">
+    <p>
+        Code:
+        <label id="lblCode"></label><br />
+        Amount:
+        <label id="lblAmount"></label><br />
+        DateIssued:
+        <label id="lblDateIssued"></label>
+    </p>
+</div>
+
+@{
+    if (Model.Count() > 0)
+    {
+        <table class="table">
+            <tr>
+                <th>
+                    Add new Menu Item
+                </th>
+                <th>
+                    User
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MenuItemViewModels.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MenuItemViewModels.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Count)
+                </th>
+                <th>
+                    Remove an Item
+                </th>
+                @*<th>
+                    Redeem a Coupon
+                </th>*@
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr id="row-@item.MenuItemId">
+                    <td>
+                        Add new @Html.ActionLink(item.MenuItemViewModels.Name, "Details", "MenuItem", new { id = item.MenuItemId }, null)
+                        <img src='@item.MenuItemViewModels.MenuCatergoryViewModel.ImageUrl' style="max-width:20px; max-height:20px;" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MenuItemViewModels.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MenuItemViewModels.Price)
+                    </td>
+                    <td id="item-count-@item.MenuItemId">
+                        @Html.DisplayFor(modelItem => item.Count)
+                    </td>
+                    <td>
+                        <a href="#" class="removeItem btn btn-danger btn-sm" data-id="@item.MenuItemId">Remove Menu Item</a>
+                    </td>
+                    @*<td>
+                        <a href="#" class="redeemCoupon" data-id="@item.MenuItemId">Redeem a Coupon</a>
+                    </td>*@
+                </tr>
+            }
+            <tr class="info">
+                <td>
+                    Total
+                </td>
+                <td></td>
+                <td></td>
+                <td id="cart-total">
+                    @Convert.ToDecimal(@ViewBag.Total)
+                </td>
+                <td></td>
+                <td></td>
+                @*<td>
+                 
+                </td>*@
+            </tr>
+        </table>
+
+        <button type="button" class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("ProcessOrder", "Order")'">
+            Place Order
+        </button>
+
+        <a href="#" id="redeemacoupon" class="redeemCoupon btn btn-default btn-sm">Redeem a Coupon</a>
+    }
+    else
+    {
+        <div>
+            <p>
+                There are no items to order.
+            </p>
+            <p>
+                @Html.ActionLink("Place an Order?", "Index", "Home")
+            </p>
+        </div>
+    }
+}

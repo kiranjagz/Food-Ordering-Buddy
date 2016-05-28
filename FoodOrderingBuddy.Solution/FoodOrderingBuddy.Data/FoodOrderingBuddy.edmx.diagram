@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="105aef8eb01c48a0847d041e181c6bbf" Name="Diagram1">
+        <EntityTypeShape EntityType="FoodOrderingBuddyModel.MenuCatergory" Width="1.5" PointX="0.75" PointY="3" />
+        <EntityTypeShape EntityType="FoodOrderingBuddyModel.MenuItem" Width="1.5" PointX="3" PointY="2.375" />
+        <EntityTypeShape EntityType="FoodOrderingBuddyModel.Order" Width="1.5" PointX="3" PointY="7.5" />
+        <EntityTypeShape EntityType="FoodOrderingBuddyModel.OrderItem" Width="1.5" PointX="5.25" PointY="2.625" />
+        <EntityTypeShape EntityType="FoodOrderingBuddyModel.ShoppingCart" Width="1.5" PointX="5.25" PointY="5.75" />
+        <AssociationConnector Association="FoodOrderingBuddyModel.FK_MenuItem_MenuCatergory" />
+        <AssociationConnector Association="FoodOrderingBuddyModel.FK_OrderItems_MenuItem" />
+        <AssociationConnector Association="FoodOrderingBuddyModel.FK_ShoppingCart_MenuItem" />
+        <AssociationConnector Association="FoodOrderingBuddyModel.FK_OrderItems_Order" />
+        <EntityTypeShape EntityType="FoodOrderingBuddyModel.NotifyMeService" Width="1.5" PointX="5.25" PointY="9.75" />
+        <AssociationConnector Association="FoodOrderingBuddyModel.FK_NotifyMeService_Order" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

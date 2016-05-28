@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FoodOrderingBuddyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="FoodOrderingBuddyEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MenuCatergories" EntityType="FoodOrderingBuddyModel.MenuCatergory" />
+    <EntitySet Name="MenuItems" EntityType="FoodOrderingBuddyModel.MenuItem" />
+    <EntitySet Name="Orders" EntityType="FoodOrderingBuddyModel.Order" />
+    <EntitySet Name="OrderItems" EntityType="FoodOrderingBuddyModel.OrderItem" />
+    <EntitySet Name="ShoppingCarts" EntityType="FoodOrderingBuddyModel.ShoppingCart" />
+    <AssociationSet Name="FK_MenuItem_MenuCatergory" Association="FoodOrderingBuddyModel.FK_MenuItem_MenuCatergory">
+      <End Role="MenuCatergory" EntitySet="MenuCatergories" />
+      <End Role="MenuItem" EntitySet="MenuItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderItems_MenuItem" Association="FoodOrderingBuddyModel.FK_OrderItems_MenuItem">
+      <End Role="MenuItem" EntitySet="MenuItems" />
+      <End Role="OrderItem" EntitySet="OrderItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ShoppingCart_MenuItem" Association="FoodOrderingBuddyModel.FK_ShoppingCart_MenuItem">
+      <End Role="MenuItem" EntitySet="MenuItems" />
+      <End Role="ShoppingCart" EntitySet="ShoppingCarts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderItems_Order" Association="FoodOrderingBuddyModel.FK_OrderItems_Order">
+      <End Role="Order" EntitySet="Orders" />
+      <End Role="OrderItem" EntitySet="OrderItems" />
+    </AssociationSet>
+    <EntitySet Name="NotifyMeServices" EntityType="FoodOrderingBuddyModel.NotifyMeService" />
+    <AssociationSet Name="FK_NotifyMeService_Order" Association="FoodOrderingBuddyModel.FK_NotifyMeService_Order">
+      <End Role="Order" EntitySet="Orders" />
+      <End Role="NotifyMeService" EntitySet="NotifyMeServices" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="MenuCatergory">
+    <Key>
+      <PropertyRef Name="MenuCatergoryId" />
+    </Key>
+    <Property Name="MenuCatergoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateCreated" Type="DateTime" Precision="7" />
+    <NavigationProperty Name="MenuItems" Relationship="FoodOrderingBuddyModel.FK_MenuItem_MenuCatergory" FromRole="MenuCatergory" ToRole="MenuItem" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="MenuItem">
+    <Key>
+      <PropertyRef Name="MenuItemId" />
+    </Key>
+    <Property Name="MenuItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MenuCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="7" Scale="2" />
+    <Property Name="Visible" Type="Boolean" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="7" />
+    <NavigationProperty Name="MenuCatergory" Relationship="FoodOrderingBuddyModel.FK_MenuItem_MenuCatergory" FromRole="MenuItem" ToRole="MenuCatergory" />
+    <NavigationProperty Name="OrderItems" Relationship="FoodOrderingBuddyModel.FK_OrderItems_MenuItem" FromRole="MenuItem" ToRole="OrderItem" />
+    <NavigationProperty Name="ShoppingCarts" Relationship="FoodOrderingBuddyModel.FK_ShoppingCart_MenuItem" FromRole="MenuItem" ToRole="ShoppingCart" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="MenuItemsTotal" Type="Int32" Nullable="false" />
+    <Property Name="Total" Type="Decimal" Nullable="false" Precision="7" Scale="2" />
+    <Property Name="OrderResponse" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="QueueId" Type="Int32" />
+    <NavigationProperty Name="OrderItems" Relationship="FoodOrderingBuddyModel.FK_OrderItems_Order" FromRole="Order" ToRole="OrderItem" />
+    <NavigationProperty Name="NotifyMeServices" Relationship="FoodOrderingBuddyModel.FK_NotifyMeService_Order" FromRole="Order" ToRole="NotifyMeService" />
+  </EntityType>
+  <EntityType Name="OrderItem">
+    <Key>
+      <PropertyRef Name="OrderItemId" />
+    </Key>
+    <Property Name="OrderItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="Int32" Nullable="false" />
+    <Property Name="MenuItemId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="7" Scale="2" />
+    <NavigationProperty Name="MenuItem" Relationship="FoodOrderingBuddyModel.FK_OrderItems_MenuItem" FromRole="OrderItem" ToRole="MenuItem" />
+    <NavigationProperty Name="Order" Relationship="FoodOrderingBuddyModel.FK_OrderItems_Order" FromRole="OrderItem" ToRole="Order" />
+  </EntityType>
+  <EntityType Name="ShoppingCart">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CartId" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MenuItemId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Count" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="7" />
+    <NavigationProperty Name="MenuItem" Relationship="FoodOrderingBuddyModel.FK_ShoppingCart_MenuItem" FromRole="ShoppingCart" ToRole="MenuItem" />
+  </EntityType>
+  <Association Name="FK_MenuItem_MenuCatergory">
+    <End Type="FoodOrderingBuddyModel.MenuCatergory" Role="MenuCatergory" Multiplicity="1" />
+    <End Type="FoodOrderingBuddyModel.MenuItem" Role="MenuItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MenuCatergory">
+        <PropertyRef Name="MenuCatergoryId" />
+      </Principal>
+      <Dependent Role="MenuItem">
+        <PropertyRef Name="MenuCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderItems_MenuItem">
+    <End Type="FoodOrderingBuddyModel.MenuItem" Role="MenuItem" Multiplicity="1" />
+    <End Type="FoodOrderingBuddyModel.OrderItem" Role="OrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MenuItem">
+        <PropertyRef Name="MenuItemId" />
+      </Principal>
+      <Dependent Role="OrderItem">
+        <PropertyRef Name="MenuItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ShoppingCart_MenuItem">
+    <End Type="FoodOrderingBuddyModel.MenuItem" Role="MenuItem" Multiplicity="1" />
+    <End Type="FoodOrderingBuddyModel.ShoppingCart" Role="ShoppingCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MenuItem">
+        <PropertyRef Name="MenuItemId" />
+      </Principal>
+      <Dependent Role="ShoppingCart">
+        <PropertyRef Name="MenuItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderItems_Order">
+    <End Type="FoodOrderingBuddyModel.Order" Role="Order" Multiplicity="1" />
+    <End Type="FoodOrderingBuddyModel.OrderItem" Role="OrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="OrderId" />
+      </Principal>
+      <Dependent Role="OrderItem">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="NotifyMeService">
+    <Key>
+      <PropertyRef Name="NotifyMeServiceId" />
+    </Key>
+    <Property Name="NotifyMeServiceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="NotifiyMeRequest" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NotifyMeResponse" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Order" Relationship="FoodOrderingBuddyModel.FK_NotifyMeService_Order" FromRole="NotifyMeService" ToRole="Order" />
+  </EntityType>
+  <Association Name="FK_NotifyMeService_Order">
+    <End Type="FoodOrderingBuddyModel.Order" Role="Order" Multiplicity="1" />
+    <End Type="FoodOrderingBuddyModel.NotifyMeService" Role="NotifyMeService" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="OrderId" />
+      </Principal>
+      <Dependent Role="NotifyMeService">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,12 @@
+﻿@model HandleErrorInfo
+
+@{
+    ViewBag.Title = "Error";
+}
+
+<h1 class="text-danger">Oops!!! someone forgot to add some logging...</h1>
+<h2 class="text-danger">An error occurred while processing your request.</h2>
+<h2 class="text-danger">Error message: @Model.Exception.Message</h2>
+
+    @Html.ActionLink("Home", "Index", "Home")
+

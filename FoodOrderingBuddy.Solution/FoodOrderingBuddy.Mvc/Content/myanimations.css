@@ -1,0 +1,22 @@
+﻿#redeemacoupon {
+    animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: red;
+    }
+
+    50% {
+        background-color: yellow;
+    }
+
+    100% {
+        background-color: forestgreen;
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
