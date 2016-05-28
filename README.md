@@ -2,6 +2,7 @@
 Internal food ordering system using C# MVC5 and EF6
 
 Software components used to build application: 
+
 1. C# MVC5
 2. Entity Framework 6
 3. Jquery 
